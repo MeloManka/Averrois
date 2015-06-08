@@ -1,0 +1,91 @@
+#popUpContent {
+    top: 0;
+    left: 0;
+    margin: 5% 0 0 25%;
+    display: inline-block;
+    height: 500px;
+    width:600px;
+    border-radius: 5px;
+    position: fixed;
+    align-content: center;
+
+    background-color: #fffcf9;
+
+}
+
+#popUpContent .close {
+    background: #edecd3;
+    color: #484848;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+}
+#popUpContent .close:hover{
+    background-color: #134568;
+    color:white;
+}
+
+#popUpContent .contentPublication{
+    display: inline-block;
+    height: 600px;
+    width: 1100px;
+}
+
+#popUpContent-bg {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.active{
+    /*background-image: url("../img/topMenu2.jpg");*/
+    background-color: #ee6802;
+}
+
+.addForm{
+    display: inline-block;
+    margin: 30px 40px;
+}
+input{
+    display: block;
+    border: none;
+    background-color: #edecd3;
+    width: 350px;
+    height: 30px;
+    padding: 0 5px;
+}
+textarea{
+    resize: none;
+    display: block;
+    height: 200px;
+    width: 500px;
+    border: none;
+    background-color: #edecd3;
+    font-family: Times;
+    padding: 5px;
+    font-size: 1.1em;
+}
+textarea:focus, input:focus {
+    box-shadow: inset 0px 0px 5px 0px rgba(50, 50, 50, 0.48);
+}
+p{
+    display: inline-block;
+}
+button{
+    margin-top:20px;
+    display: block;
+    border: none;
+    background-color: #edecd3;
+    padding: 5px 10px;
+}
+button:hover{
+    background-color: #134568;
+}

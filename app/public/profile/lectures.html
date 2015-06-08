@@ -1,0 +1,57 @@
+
+<link rel="stylesheet" type="text/css" href="css/styleBiography.css">
+<link rel="stylesheet" type="text/css" href="css/stylePublishing.css">
+<link rel="stylesheet" type="text/css" href="css/styleSidebarAndHeader.css">
+
+
+<header ng-include="'profile/header.html'"></header>
+
+
+<div class="sidebar" ng-include="'profile/sidebar.html'"></div>
+<div class="content">
+    <p ng-show = "lectures.length == 0">У Вас нет лекций</p>
+    <table ng-show = "lectures.length != 0" class="tablePublishing">
+        <tr>
+            <th class="namePublication">Наименование</th>
+            <th class="buttonDetails1"></th>
+            <th class="buttonDetails2"></th>
+            <th class="buttonDetails3"></th>
+
+        </tr>
+        <tr ng-repeat="lecture in lectures" >
+            <td class="namePublication">{{lecture.nameLecture}}</td>
+            <td class="buttonDetails1" ng-click="openPopUp(1,lecture)">Подробнее</td>
+            <td class="buttonDetails2" >Ред.</td>
+            <td class="buttonDetails3" ng-click="delPub(lecture.id)">Удалить</td>
+        </tr>
+    </table>
+
+</div>
+<pop-up-content>
+    <div id="popUpContent-bg" ng-show="showPopUpContent">
+        <div id="popUpContent" >
+            <div class="close" ng-click="closePopUp(1)">
+                x
+            </div>
+            <div class="contentPublication">
+
+                <div class="name">
+                    {{lecture.nameLecture}}
+                </div>
+                <br>
+                <a target="_self" href="{{lecture.link}}">
+                    <button>скачать</button>
+                </a>
+                <div class="description">
+                    {{lecture.description}}<br>
+                </div>
+            </div>
+        </div>
+    </div>
+</pop-up-content>
+
+
+
+
+
+<div ng-include="'profile/addPublication.html'"></div>

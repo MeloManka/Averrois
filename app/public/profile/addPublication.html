@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="css/addPublication.css">
+
+<pop-up-content>
+    <div id="popUpContent-bg" ng-show="showPopUpContent1">
+        <div id="popUpContent" >
+            <div class="close" ng-click="closePopUp(2)">
+                x
+            </div>
+            <div></div>
+            <div class="contentPublication">
+                <div class="addForm">
+                    <form class="add">
+                        <p>Имя публикации:</p>
+                        <input type="text" ng-model="publication.namePublication">
+                        <p>Описание публикации:</p>
+                        <textarea ng-model="publication.description"></textarea>
+                        <button class="button" ngf-select="" type="file" accept="application/pdf" ng-model="files">Загрузить файл</button><p>{{files[0].name}}</p>
+                        <button style="float: right" ng-click="addPublication(publication,files)">Добавить</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</pop-up-content>

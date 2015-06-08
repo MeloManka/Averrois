@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="css/styleLogin.css">
+<button class="back" ng-click="back()">Назад</button>
+<form class="formLogin">
+    <p class="wordEnter">Вход</p>
+    <hr>
+    <p>Логин:</p>
+    <input name="email" ng-model="users.login"></br>
+    <p>Пароль:</p>
+    <input type="password" name="password" ng-model="users.password"></br>
+
+    <button ng-click = "enter(users)" class="buttonEnter">Войти</button>
+</form>

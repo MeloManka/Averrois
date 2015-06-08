@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="css/edit.css">
+
+<pop-up-content>
+    <div id="popUpContent-bg" ng-show="showPopUpContent1">
+        <div id="popUpContent" >
+            <div class="close" ng-click="closePopUp()">
+                x
+            </div>
+            <div class="contentPublication">
+                <ul class="editMenu">
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(1)}"><a href ng-click = "selectTab1(1)">Общая информация</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(2)}"><a href ng-click = "selectTab1(2)">Публикации</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(3)}"><a href ng-click = "selectTab1(3)">Дипломы и грамоты</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(4)}"><a href ng-click = "selectTab1(4)">Образов. деятельность</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(5)}"><a href ng-click = "selectTab1(5)">Мои хобби</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(6)}"><a href ng-click = "selectTab1(6)">Мои сайты</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(7)}"><a href ng-click = "selectTab1(7)">Интервью</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(8)}"><a href ng-click = "selectTab1(8)">Контактная информация</a></li>
+                    <li class="subEditMenu" ng-class = "{active1:isSelected1(9)}"><a href ng-click = "selectTab1(9)">Фотографии</a></li>
+                </ul>
+                <div class="editForm">
+                    <form class="edit">
+                        <textarea ng-show="isSelected1(1)" ng-model="person.generalInformation"></textarea>
+                        <textarea ng-show="isSelected1(2)" ng-model="person.publishing"></textarea>
+                        <textarea ng-show="isSelected1(3)" ng-model="person.diplomasAndCertificates"></textarea>
+                        <textarea ng-show="isSelected1(4)" ng-model="person.educationalActivities"></textarea>
+                        <textarea ng-show="isSelected1(5)" ng-model="person.myHobbies"></textarea>
+                        <textarea ng-show="isSelected1(6)" ng-model="person.mySites"></textarea>
+                        <textarea ng-show="isSelected1(7)" ng-model="person.interview"></textarea>
+                        <textarea ng-show="isSelected1(8)" ng-model="person.contactInformation"></textarea>
+                        <textarea ng-show="isSelected1(9)" ng-model="person.photographs"><img ng-src="{{person.biography.photographs}}"></textarea>
+                        <br><button ng-click="saveChangeBiography(person)">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</pop-up-content>

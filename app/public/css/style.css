@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Bebas; /* Имя шрифта */
+    src: url(../fonts/BebasBold.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: KelsonSansRegular;
+    src: url(../fonts/KelsonSansRegularRU.otf);
+}
+@font-face {
+    font-family: Vigneta;
+    src: url(../fonts/Vigneta_Typeface.otf);
+}

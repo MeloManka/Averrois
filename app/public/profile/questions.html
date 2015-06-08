@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" type="text/css" href="css/styleBiography.css">
+<link rel="stylesheet" type="text/css" href="css/styleSidebarAndHeader.css">
+<link rel="stylesheet" type="text/css" href="css/styleQuestions.css">
+
+
+<header ng-include="'profile/header.html'"></header>
+
+<ul class="topMenu">
+    <li class="topMenuLi" ng-class = "{active:isSelected(1)}"><a href ng-click = "selectTab(1);questions()">Вопросы</a></li>
+    <li class="topMenuLi" ng-class = "{active:isSelected(2)}"><a href ng-click = "selectTab(2);answer()">Ответы</a></li>
+
+</ul>
+<div class="sidebar" ng-include="'profile/sidebar.html'"></div>
+<div class="cont">
+    <div ng-show="isSelected(1)">
+        <form>
+            <textarea ng-model="quest.text"></textarea>
+            <button ng-click="ask(quest)">Задать вопрос</button>
+        </form>
+        <div ng-repeat="question in questions">
+            <p>{{question.question}}</p>
+            <button ng-click="openPopUp(1,question)">Ответить</button>
+        </div>
+    </div>
+    <div ng-show="isSelected(2)">
+        <div ng-repeat="answer in answers"></div>
+    </div>
+</div>
+
+<pop-up-content>
+    <div id="popUpContent-bg" ng-show="showPopUpContent">
+        <div id="popUpContent" >
+            <div class="close" ng-click="closePopUp(1)">
+                x
+            </div>
+            <div class="contentQuestions">
+                <div class="question">
+                    <span>{{question.question}}</span>
+                </div>
+                <div class="answer">
+                    <textarea></textarea>
+                </div>
+                <button>Ответить</button>
+            </div>
+        </div>
+    </div>
+</pop-up-content>

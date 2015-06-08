@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="css/styleRegistration.css">
+<button class="back" ng-click="back()">Назад</button>
+<form class="formRegistration">
+    <p class="wordEnter">Регистрация</p>
+    <hr>
+    <p>Логин*:
+        <input name="login" ng-model="users.login"></br>
+    </p>
+
+    <p>Пароль*:
+        <input type="password" name="password" ng-model="users.password1"></br>
+    </p>
+
+    <p>Повторите пароль*:
+        <input type="password" name="repeatPassword" ng-model="users.password2"></br>
+    </p>
+
+    <p>Имя*:
+        <input type="text" name="name" ng-model="users.name"></br>
+    </p>
+
+    <p>Фамилия*:
+        <input type="text" name="surname" ng-model="users.surname"></br>
+    </p>
+
+    <p>Отчество*:
+        <input type="text" name="patronymic" ng-model="users.patronymic"></br>
+    </p>
+
+    <p>Возраст*:
+        <input type="number" name="age" ng-model="users.age"></br>
+    </p>
+
+
+    <button ng-click = "enter(users)" class="buttonEnter" >Зарегестрироваться</button>
+</form>

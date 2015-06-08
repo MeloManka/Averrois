@@ -1,0 +1,224 @@
+body{
+    background: url(../img/back.jpg) fixed;
+    margin: 0;
+
+}
+
+.content {
+    display: inline-block;
+    margin: 35px 0 0 70px;
+    min-height: 530px;
+    max-height: auto;
+    width: 1160px;
+    padding: 20px 20px 0 30px;
+}
+
+header{
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+    color: #fff;
+    background-color: #134568;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    height: 70px;
+    width: 133px;
+    margin: 5px 0 0 5px;
+    background: url(../img/logo1.png) ;
+}
+
+
+
+
+.titlePage{
+    display: inline-block;
+    vertical-align: middle;
+    height: 90px;
+    width: 1000px;
+    font-size: 1.7em;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 8px;
+    font-family: Bebas;
+    color:#edecd3;
+}
+
+ul.rightMenu{
+    float: right;
+    display: inline-block;
+    height: 100px;
+    width: 70px;
+
+    margin: 2px 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+ul.rightMenu > li > a {
+    display: block;
+    position: relative;
+    float: right;
+    background: url("../img/rightMenu(before)1.png");
+    height: 100px;
+    width: 70px;
+
+    color:white;
+    text-decoration: none;
+}
+
+ul.rightMenu > li > a:hover {
+    background:url("../img/rightMenu(after).png");
+}
+
+ul.subRightMenu {
+    display: none;
+    position: absolute;
+
+    top:102px;
+    float: left;
+    right:0px;
+    z-index: 30;
+}
+
+ul.subRightMenu > li {
+    display: block;
+}
+
+ul.subRightMenu > li > a {
+    width: 200px;
+    display: block;
+    height: 40px;
+
+    background-color: #edecd3;
+    text-decoration: none;
+    color:#134568;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 1px 0px 5px 1px #5d5d5d;
+}
+ul.subRightMenu > li > a:hover {
+    background-color: #134568;
+    box-shadow: none;
+
+    color:#edecd3;
+
+}
+ul.rightMenu > li:hover > ul.subRightMenu {
+    display: block;
+}
+/*
+ul.rightMenu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+    float: right;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(17, 89, 52, 0.18);
+    box-shadow: 0px 0px 1px 3px #0f4f2e inset;
+}
+
+
+ul.rightMenu > li > a {
+    display: block;
+    position: relative;
+    float: right;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(17, 89, 52, 0.18);
+    box-shadow: 0px 0px 1px 3px #0f4f2e inset;
+    color:white;
+    text-decoration: none;
+}
+ul.rightMenu > li > a:hover {
+    background-color: #0f4f2e;
+}
+ul.subRightMenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top:70px;
+    float: right;
+    right:0px;
+
+
+}
+ul.subRightMenu > li {
+    display: block;
+}
+ul.subRightMenu > li > a {
+    display: block;
+
+    color: white;
+    background-color: green;
+    text-decoration: none;
+}
+ul.subRightMenu > li > a:hover {
+    text-decoration: underline;
+}
+ul.rightMenu > li:hover > ul.subRightMenu {
+    display: block;
+}
+
+*/
+
+.sidebar{
+    position:absolute;
+    z-index:2;
+    margin-top: 35px;
+    transition: all 0.5s ease-in-out;
+    height:500px;
+    width:40px;
+
+    background-color: rgba(19, 69, 104, 0.80);
+}
+
+.sidebar:hover{
+    width:800px;
+    z-index:2;
+}
+
+.buttonProfile{
+    display: inline-block;
+    height: 67px;
+    width: 58px;
+    background-image: url("../img/buttonProfile2.png");
+    position: absolute;
+
+    transform:scale(0.2);
+    transition: all 0.5s ease-in-out;
+    margin-left: -200px;
+}
+
+.svgMenu {
+    position:absolute;
+    margin:70px 0 0 -210px;
+    transform:scale(0.2);
+    transition: all 0.5s ease-in-out;
+    fill:#edecd3;
+}
+
+.sidebar:hover .svgMenu{
+    transform:translateX(20px);
+    margin:70px 0 0 180px;
+}
+
+.sidebar:hover .buttonProfile{
+    transform:translateX(20px);
+    margin:50px 0 0 80px;
+}
+
+.buttonProfile:hover{
+    background-image: url("../img/buttonProfile3.png");
+}
+
+.svgMenu:hover{
+    fill:#ee6802;
+}

@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="css/styleSidebarAndHeader.css">
+<link rel="stylesheet" type="text/css" href="css/stylePublishing.css">
+
+<header ng-include="'profile/header.html'"></header>
+<div class="sidebar" ng-include="'profile/sidebar.html'"></div>
+
+<div class="content">
+    <p ng-show = "publishing.length == 0">У Вас нет публикаций</p>
+    <div ng-show = "publishing.length != 0"  ng-repeat="publication in publishing">
+
+        <div class="namePublication">{{publication.num}}. {{publication.namePublication}}</div>
+        <div class="details">
+            <div class="buttonDetails1" ng-click="openPopUp(1,publication)">п </div>
+            <div class="buttonDetails2" >p </div>
+            <div class="buttonDetails3" ng-click="delPub(publication.id)">x </div>
+        </div>
+    </div>
+<!--    <table ng-show = "publishing.length != 0" class="tablePublishing">
+        <tr>
+            <th class="namePublication">Наименование</th>
+            <th class="buttonDetails1"></th>
+            <th class="buttonDetails2"></th>
+            <th class="buttonDetails3"></th>
+
+        </tr>
+        <tr ng-repeat="publication in publishing" >
+            <td class="namePublication">{{publication.namePublication}}</td>
+            <td class="buttonDetails1" ng-click="openPopUp(1,publication)">Подробнее</td>
+            <td class="buttonDetails2" >Ред.</td>
+            <td class="buttonDetails3" ng-click="delPub(publication.id)">Удалить</td>
+        </tr>
+    </table>-->
+
+</div>
+    <pop-up-content>
+        <div id="popUpContent-bg" ng-show="showPopUpContent">
+            <div id="popUpContent" >
+                <div class="close" ng-click="closePopUp(1)">
+                    x
+                </div>
+                <div class="contentPublication1">
+
+                    <div class="name">
+                        Имя публикации: {{publication.namePublication}}
+                    </div>
+                    <br>
+
+                    <div class="description">
+                        Описание: {{publication.description}}<br>
+                    </div>
+                    <a target="_self" href="{{publication.link}}">
+                        <button>скачать</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </pop-up-content>
+
+
+
+
+
+<div ng-include="'profile/addPublication.html'"></div>
